@@ -35,4 +35,18 @@ public class StudentService {
     }
 
 
+    public String updStud(Student student) {
+        int index=0;
+        for(int i=0;i<this.student.size();i++)
+        {
+            if(this.student.get(i).getRollno()==student.getRollno())
+            {
+                index=i;
+                this.student.set(index, student);
+                return "student successfully updated";
+
+            }
+        }
+        return "student not found";
+    }
 }

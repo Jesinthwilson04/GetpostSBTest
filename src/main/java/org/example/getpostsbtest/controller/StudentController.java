@@ -32,6 +32,11 @@ public class StudentController {
         studentService.addStudent(student);
         return "successfully added a new student";
     }
+    @PutMapping("student")
+    public String updateStudents(@RequestBody Student student)
+    {
+        return studentService.updStud(student);
+    }
 
 
 }
